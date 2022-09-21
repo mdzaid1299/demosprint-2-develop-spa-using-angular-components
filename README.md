@@ -13,14 +13,17 @@ Create a Hello world application using the CLI command and execute it to see the
 - Create a new Angular application with the following command: ng new hello-world
 - Navigate to the “workspace” folder with the following command: cd hello-world
 - Explore the following files and folders created by the Angular CLI:
-- node_modules: Contains third-party libraries and files, which are bundled into the project
-- src: Contains the main code files related to the Angular application
-- app: Contains the modules and components of the Angular application
-- assets: Is a placeholder for resource files used in the application such as images, icons, etc.
-- package.json: Is the npm configuration file containing all the dependencies and can be used to modify dependency versions as required
-- angular.json: Defines the structure of the application, includes the settings associated with the application, and can be used to specify the environments—development, production, etc.
-- tsconfig.json: Is a TypeScript compiler configuration file that is responsible for compiling TypeScript to JavaScript for the browser to understand 
-- Delete the default code from app.component.html and add the following code snippet: <h1>Hello World!!</h1>
+- `node_modules`: Contains third-party libraries and files, which are bundled into the project
+- `src`: Contains the main code files related to the Angular application
+- `app`: Contains the modules and components of the Angular application
+- `assets`: Is a placeholder for resource files used in the application such as images, icons, etc.
+- `package.json`: Is the npm configuration file containing all the dependencies and can be used to modify dependency versions as required
+- `angular.json`: Defines the structure of the application, includes the settings associated with the application, and can be used to specify the environments—development, production, etc.
+- `tsconfig.json`: Is a TypeScript compiler configuration file that is responsible for compiling TypeScript to JavaScript for the browser to understand 
+- Delete the default code from app.component.html and add the following code snippet: 
+    ```html
+    <h1>Hello World!!</h1>
+    ```
  Run the Angular application using the following command: `ng serve --open`
 
 [**Demo 3 :: Create Fruit Fantasy App**](Demo-3-Fruit-Fantasy)
@@ -144,7 +147,7 @@ Modify the app component of fruit fantasy app to display the list of fruits.​ 
     } 
     ```
 
-- Run the angular app by command ‘ng serve --open’. 
+- Run the angular app by command `ng serve --open`. 
 
 [**Demo 5 :: Search Fruits in Fruit Fantasy App**](Demo-5-Fruit-Fantasy-Search-Fruits)
 
@@ -154,7 +157,7 @@ Add search functionality to the Fruit Fantasy app which allows users to search f
 - Modify app component and add selector of Fruit-Manager component. 
 - Follow below steps in Fruit-Manager Component:  
     - In .html,  
-    - Import FormsModule in app.module.ts from @angular/forms to use ngModel.
+    - Import `FormsModule` in `app.module.ts` from `@angular/forms` to use `ngModel`.
     - Design search layout with text box and two buttons - Go and Clear. 
     - Implement 2-way binding using ngModel between search text box and property fruitName. 
         ```html
@@ -172,12 +175,12 @@ Add search functionality to the Fruit Fantasy app which allows users to search f
         </div> 
         ```
     - In .ts file, 
-    - create fruits array property and to it assign the FRUITS array exported from models/fruits.ts file. 
+    - create fruits array property and to it assign the `FRUITS` array exported from `models/fruits.ts` file. 
         ```ts
         fruits = FRUITS; 
         ```
-    - Define two functions search() and reset() . 
-    - When the Go button is clicked, it will invoke search() method to filter the fruit from fruit-list. 
+    - Define two functions `search()` and `reset()` . 
+    - When the Go button is clicked, it will invoke `search()` method to filter the fruit from fruit-list. 
         ```ts
         search() { 
             this.fruits = this.temp.filter((result) => 
@@ -188,7 +191,7 @@ Add search functionality to the Fruit Fantasy app which allows users to search f
             } 
         } 
         ```
-    - When the Clear button is clicked , it will invoke reset() method to clear all fields. 
+    - When the Clear button is clicked , it will invoke `reset()` method to clear all fields. 
         ```ts
         reset() { 
             this.searchText = ''; 
@@ -236,4 +239,4 @@ Add search functionality to the Fruit Fantasy app which allows users to search f
             margin: 5px; 
         } 
         ```
-    - Run the angular app by command ‘ng serve --open’. 
+    - Run the angular app by command `ng serve --open`. 
