@@ -1,0 +1,14 @@
+<div class="search-box">
+    <input type="text" placeholder="Search Fruit" [(ngModel)]="searchText" />
+    <button (click)="search()" type="button">Go</button>
+    <button (click)="reset()" type="button">Clear</button>
+</div>
+
+<div class="card" *ngFor="let fruit of fruits">
+    <img src="../../assets/fruits/{{fruit.name}}.jpg" alt={{fruit.name}}>
+    <div class="card-content">
+        <h4>{{fruit.name}}</h4>
+        <span>${{fruit.price}} per {{fruit?.unit}} </span>
+     </div>
+</div>
+

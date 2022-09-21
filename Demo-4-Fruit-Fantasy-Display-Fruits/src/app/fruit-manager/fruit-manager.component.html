@@ -1,0 +1,9 @@
+<div class="card" *ngFor="let fruit of fruits">
+    <img src="../../assets/fruits/{{fruit.name}}.jpg" alt={{fruit.name}}>
+    <div class="card-content">
+        <h4>{{fruit.name}}</h4>
+        <span>${{fruit.price}} per {{fruit?.unit}} </span>
+     </div>
+</div>
+
+
